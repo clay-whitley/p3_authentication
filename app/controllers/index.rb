@@ -24,9 +24,10 @@ post '/sessions' do
   redirect '/'
 end
 
-delete '/sessions/:id' do
+get '/logout' do
   # sign-out -- invoked via AJAX
   session[:current_user] = nil
+  redirect '/'
 end
 
 #----------- USERS -----------
